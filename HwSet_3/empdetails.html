@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee PortaL</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="empdetails.html">Add Employee</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="empsearch.html">Search Employee</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Logout</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="container">
+          <div class="row">
+              <div class="col col-12 col-sm-2"></div>
+              <div class="col col-12 col-sm-8">
+                    <table class="table">
+                        <tr>
+                            <td>Employee Code</td>
+                            <td><input type="text" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Name</td>
+                            <td><input type="text" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Password</td>
+                            <td><input type="password" id="pass1" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Confirm Password</td>
+                            <td><input type="password" id="pass2" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Designation</td>
+                            <td><input type="text" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Salary</td>
+                            <td><input type="text" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>District</td>
+                            <td><select name="district" class="form-control">
+                                <option value="Selectoption" selected>Select District</option>
+                                <option value="Kasaragod">Kasaragod</option>
+                                <option value="Kannur">Kannur</option>
+                                <option value="Kozhikode">Kozhikode</option>
+                                <option value="Wayanad">Wayanad</option>
+                                <option value="Malappuram">Malappuram</option>
+                                <option value="Thrissur">Thrissur</option>
+                                <option value="Palakkad">Palakkad</option>
+                                <option value="Ernakulam">Ernakulam</option>
+                                <option value="Idukki">Idukki</option>
+                                <option value="Alappuzha">Alappuzha</option>
+                                <option value="Kottayam">Kottayam</option>
+                                <option value="Kollam">Kollam</option>
+                                <option value="Pathanamthitta">Pathanamthitta</option>
+                                <option value="Trivandrum">Trivandrum</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <td>Gender</td>
+                            <td><input type="radio" name="gender" value="male">male <input type="radio" name="gender" value="female">female</td>
+                        </tr>
+                        <tr>
+                            <td>Place</td>
+                            <td><input type="text" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Mobile</td>
+                            <td><input type="text" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Address</td>
+                            <td><textarea name="address" id="" cols="30" rows="10" placeholder="Enter Address Here. . ." class="form-control"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>DOB</td>
+                            <td><input type="date" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><button type="button" class="btn btn-success" onclick="checkPassword();">SUBMIT</button></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><p id="result"></p></td>
+                        </tr>
+                    </table>
+              </div>
+              <div class="col col-12 col-sm-2"></div>
+          </div>
+      </div>
+      <script>
+          function checkPassword()
+          {
+              var pas1=document.getElementById("pass1").value;
+              var pas2=document.getElementById("pass2").value;
+
+              if(pas1==pas2)
+              {
+                  document.getElementById("result").innerHTML = "Success!!! Password Match";
+              }
+              else{
+                  document.getElementById("result").innerHTML = "Passwords does not match !!! Try again"
+              }
+          }
+      </script>
+</body>
+</html>
