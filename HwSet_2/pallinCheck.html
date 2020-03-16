@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Check</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form>
+                    <table class="table">
+                        <tr>
+                            <td>Enter Number</td>
+                            <td><input type="text" id="num1" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><button type="button" class="btn btn-success" onclick="palinCheck();">Check</button></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><p id="result"></p></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        function palinCheck()
+        {
+            var x = parseInt( document.getElementById("num1").value);
+            var temp = x;
+            var y = 0;
+
+            while(temp!=0)
+            {
+                y=y*10+(temp%10);
+                temp=parseInt( temp/10);
+            }
+
+            if(x==y)
+            {
+                document.getElementById("result").innerHTML = " Number " + x + " is palindrome";
+            }
+            else{
+                document.getElementById("result").innerHTML = " Number " + x + " is not palindrome";
+            }
+        }
+    </script>
+</body>
+</html>
