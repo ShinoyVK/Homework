@@ -1,0 +1,77 @@
+<div class="card">
+    <form (ngSubmit)="addUser()">
+        <div class="card-header">
+            {{title}} 
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table">
+                    <tr>
+                        <td>First Name</td>
+                        <td><input type="text" name="u_name" [(ngModel)]="newUser.firstName" pattern="[A-Za-z]{3,}" title="Alphabets Please !!" required></td>
+                    </tr>
+                    <tr>
+                        <td>Last Name</td>
+                        <td><input type="text" name="u_lname" [(ngModel)]="newUser.lastName" pattern="[A-Za-z]{1,}" title="Alphabets Please !!" required></td>
+                    </tr>
+                    <tr>
+                        <td>Gender</td>
+                        <td><input type="radio" name="u_gender" [(ngModel)]="newUser.gender" value="male">male <input type="radio" name="gender" [(ngModel)]="newUser.gender" value="female">female</td>
+                    </tr>
+                    <tr>
+                        <td>DOB</td>
+                        <td><input type="date" name="u_dob" [(ngModel)]="newUser.dob" required></td>
+                    </tr>
+                    <tr>
+                        <td>District</td>
+                        <td><select name="district" [(ngModel)]="newUser.district" class="form-control" required>
+                            <option value="Selectoption" selected>Select District</option>
+                            <option value="Kasaragod">Kasaragod</option>
+                            <option value="Kannur">Kannur</option>
+                            <option value="Kozhikode">Kozhikode</option>
+                            <option value="Wayanad">Wayanad</option>
+                            <option value="Malappuram">Malappuram</option>
+                            <option value="Thrissur">Thrissur</option>
+                            <option value="Palakkad">Palakkad</option>
+                            <option value="Ernakulam">Ernakulam</option>
+                            <option value="Idukki">Idukki</option>
+                            <option value="Alappuzha">Alappuzha</option>
+                            <option value="Kottayam">Kottayam</option>
+                            <option value="Kollam">Kollam</option>
+                            <option value="Pathanamthitta">Pathanamthitta</option>
+                            <option value="Trivandrum">Trivandrum</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td>Phone</td>
+                        <td><input type="text" name="u_phone" [(ngModel)]="newUser.phone" required pattern="[0-9]{10}" required title="10 Digit mobile number Please !!"></td>
+                    </tr>
+                    <tr>
+                        <td>Address</td>
+                        <td><textarea name="u_address" id="" [(ngModel)]="newUser.address" cols="30" rows="10" placeholder="Enter Address Here. . ." class="form-control" required></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><input type="u_email" [(ngModel)]="newUser.email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td><input type="password" name="u_password" id="pass1" [(ngModel)]="newUser.password" pattern=".{8,}"  required title="8 characters minimum"></td>
+                    </tr>
+                    <tr>
+                        <td>Confirm Password</td>
+                        <td><input type="password" id="pass2" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><button type="submit" class="btn btn-success">Get Started</button></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><p id="result"></p></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </form> 
+</div>

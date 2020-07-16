@@ -1,0 +1,53 @@
+<div class="card">
+    <form (ngSubmit)="editProduct()">
+        <div class="card-header">
+            {{productOne.productId}}
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <div ng-controller="testController" >
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>Product ID</td>
+                            <td><input type="text" name="p_id" [(ngModel)]="productOne.productId" ></td>
+                        </tr>
+                        <tr>
+                            <td>Product Name</td>
+                            <td><input type="text" name="p_name" [(ngModel)]="productOne.productName"/></td>
+                        </tr>
+                        <tr>
+                            <td>Product Code</td>
+                            <td><input type="text" name="p_code" [(ngModel)]="productOne.productCode"/></td>
+                        </tr>
+                        <tr>
+                            <td>Release Date</td>
+                            <td><input type="text" name="p_date" [(ngModel)]="productOne.releaseDate"/></td>
+                        </tr>
+                        <tr>
+                            <td>Description</td>
+                            <td><input type="text" name="p_desc" [(ngModel)]="productOne.description"/></td>
+                        </tr>
+                        <tr>
+                            <td>Price</td>
+                            <td><input type="text" name="p_price" [(ngModel)]="productOne.price"/></td>
+                        </tr>
+                        <tr>
+                            <td>Star Rating</td>
+                            <td><input type="text" name="p_rating" [(ngModel)]="productOne.starRating"/></td>
+                        </tr>
+                        <tr>
+                            <td>Image Url</td>
+                            <td><input type="text" name="p_image" [(ngModel)]="productOne.imageUrl"/></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="submit" value="Submit"/></td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
